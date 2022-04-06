@@ -1,6 +1,7 @@
 # BELVO Backend Challenge
 
 
+
 ## Install and run instructions: 
 
 ```
@@ -34,13 +35,13 @@ $http GET http://localhost:8080/users/?user_id=1
 Output: ```{"name":"Rafael Cabral", email:"rafael@tryingbelvo.com", "age":33 }```
 
 ### Transactions 
-#### Add User transactions (usertransadd/ endpoint)
+#### Add User transactions (*usertransadd/* endpoint)
 Input is a list of one or many User's transactions:
 ``` 
 $echo '[{"reference": "000051", "account": "C00099", "date": "2020-01-03", "amount": -51.13, "type": "outflow", "category": "groceries", "user_id": 1}]' | http POST http://localhost:8080/usertransadd/
 ```
 Output: the list of Transactions were added
-#### User's accounts balance summary (userbalance/ endpoint)
+#### User's accounts balance summary (*userbalance/* endpoint)
 - Input paramenter: user_id 
 ```
 $http GET http://localhost:8080/userbalance/?user_id=<user_id>
@@ -62,7 +63,7 @@ Json Output:
 ]
 ```
 
-#### User's balance summary by category
+#### User's balance summary by category (*userbalancebycategory/* endpoint)
 - Input paramenter: user_id
 - Input parameter: date_begin (YYYY-MM-DD)
 - Input parameter: date_end (YYYY-MM-DD)
