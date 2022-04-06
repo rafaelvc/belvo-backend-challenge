@@ -1,9 +1,0 @@
-https://www.youtube.com/watch?v=x1xEpaigyj0
-https://levelup.gitconnected.com/really-fast-bulk-updates-with-django-rest-framework-43594b18bd75
-https://github.com/cdknorow/django_bulk_tutorial
-https://stackoverflow.com/questions/51489952/drf-listserializer-and-listfield
-http://pythonclub.com.br/django-rest-framework-requests-responses.html
-
-
-https://www.youtube.com/watch?v=0EmvB9fvmsA (test cases)
-purge the database: python manage.py flush --noinput
