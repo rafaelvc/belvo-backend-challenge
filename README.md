@@ -99,9 +99,9 @@ them (you don’t need to solve them in code, just outlining and explaining the 
 solve them is sufficient).
 
 
-- *I see a bottleneck during the User's accounts balance summary API processing. My suggestion is to create a database model Account and add the outflow and inflow balances fields to it. Then inflow/outflow balances are updated  when the transaction is just added. That will prevent using aggregations queries to process account balances diminishing database processing. The information asked is just there already computed.*
+- *I see a bottleneck during the User's accounts balance summary API processing. My suggestion is to create a database model Account and add the outflow and inflow balances fields to it. Then inflow/outflow balances are updated  when the transaction is just added. That will prevent using aggregations queries to process account balances diminishing drastically database processing. The information asked is just there already computed.*
 
-- *The same idea might be applied for the User's balance summary by category. We should also update the inflow/outflow balances by category for each Transaction which is added. That will prevent using aggregations queries to process account balances diminishing database processing. The information asked is just there already computed.*
+- *The same idea might be applied for the User's balance summary by category. We should also update the inflow/outflow balances by category for each Transaction which is added. That will prevent using aggregations queries to process account balances diminishing drastically database processing. The information asked is just there already computed.*
 
 - *I would use a more robust database such as PostgreSQL.*
 
