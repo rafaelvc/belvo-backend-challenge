@@ -12,12 +12,6 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('name')
     serializer_class = UserSerializer
 
-@api_view(['GET'])
-def user_age_sum(request):
-    instance = User.objects.aggregate(Sum('age'))
-    serializer = UsersAgeSerializer(instance)
-    return Response(serializer.data)
-
 @api_view(['POST'])
 def transactions_bulk_create(request):
     transactions = request.data

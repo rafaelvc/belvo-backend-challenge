@@ -10,7 +10,6 @@ router.register(r'users', views.UserViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('sumage/', views.user_age_sum),
     path('usertransadd/', views.transactions_bulk_create),
     path('userbalance/',  views.user_transactions_balance),
     path('userbalancebycategory/',  views.user_transactions_category)
