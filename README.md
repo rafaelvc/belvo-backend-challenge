@@ -91,7 +91,6 @@ Json Output:
 - Unit tests are located in the ```UserTransAPI/tests.py``` file. Running the test:
 ```
 $docker exec -it belvo-backend-1_app /bin/bash
-$cd belvophase2/
 $python manage.py test
 ```
 ## Perforamce discussion
