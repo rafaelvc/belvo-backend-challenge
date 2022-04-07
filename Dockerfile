@@ -10,7 +10,7 @@ RUN ls .
 
 RUN pip install -r requirements.txt
 
-VOLUME /src
+# VOLUME /src
 
 EXPOSE 8080
 

@@ -4,7 +4,7 @@ services:
   belvo-challenge-api:
     build: .
     container_name: belvo-backend-1_app
-    volumes:
-      - ./src/belvophase2:/src
+      #    volumes:
+      # - ./belvophase2:/src
     ports:
-      - "9090:8000"
+      - "8080:8000"
