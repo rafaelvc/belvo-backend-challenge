@@ -10,14 +10,8 @@ $cd belvo-backend-challenge
 $docker-compose up -d
 ```
 
-## API descriptions
+## API descriptions with <a href=https://httpie.io/>httpie</a> samples
 ### Users (*users/* endpoint)
-*List users*
-```
-$http GET http://localhost:8080/users/
-```
-Output:
-``` [ {"name":"user1", email:"email1", "age":99 }, ... ]```
 
 *Create a user*
 
@@ -25,6 +19,14 @@ Output:
 
 Output:
 ``` {"name":"Rafael Cabral", email:"rafael@tryingbelvo.com", "age":33 }```
+
+*List users*
+```
+$http GET http://localhost:8080/users/
+```
+Output:
+``` [ {"name":"user1", email:"email1", "age":99 }, ... ]```
+
 
 *Get user details*
 
