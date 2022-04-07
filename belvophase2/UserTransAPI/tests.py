@@ -22,6 +22,10 @@ class TestCases(APITestCase):
 
     goal2_output = {"inflow": {"salary": 2500.72, "savings": 150.72}, "outflow": {"groceries": -51.13, "rent": -560.00, "transfer": -150.72}}
 
+    date_test1_out = [
+                {"account": "C00099", "balance": 1789.9999999999998, "total_inflow": 2500.72, "total_outflow": -710.72},
+                {"account": "S00012", "balance": 150.72, "total_inflow": 150.72, "total_outflow": 0} ]
+
     def add_user1(self):
         response = self.client.post('/users/', data=json.dumps(TestCases.user1), content_type='application/json')
         self.assertEquals(response.data, TestCases.user1_out)
@@ -37,7 +41,10 @@ class TestCases(APITestCase):
         self.assertEquals(response.data, TestCases.goal1_output)
 
     def test_goal1_for_date_ranges(self):
-        pass
+        self.add_user1()
+        self.add_user1_trans()
+        response = self.client.get('/userbalance/?user_id=1&date_begin=2020-01-10&date_end=2020-10-13')
+        self.assertEquals(response.data, TestCases.date_test1_out)
 
     def test_goal2(self):
         self.add_user1()
@@ -66,10 +73,5 @@ class TestCases(APITestCase):
         response = self.client.post('/usertransadd/', data=json.dumps(wrong_type), content_type='application/json')
         self.assertEquals(str(response.data), expected)
 
-
     def test_duplicated_trans(self):
-        # trans1 = [{"reference": "000088", "account": "C00099", "date": "2020-01-03", "amount": "51.13", "type": "intflow", "category": "groceries", "user_id": 1}]
-        # self.add_user1()
-        # response = self.client.post('/usertransadd/', data=json.dumps(trans1), content_type='application/json')
-        # self.assertEquals(response.status_code, status.HTTP_201_CREATED)
         pass
