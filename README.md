@@ -93,7 +93,7 @@ Json Output:
 $docker exec -it belvo-backend-1_app /bin/bash
 $python manage.py test
 ```
-## Perforamce discussion
+## Performance discussion
 
 > Can you highlight the parts of the application that are likely to be performance
 bottlenecks when the user base grows to, say, 10 million users? How would you solve
